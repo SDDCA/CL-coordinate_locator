@@ -1,29 +1,69 @@
-# mp
 
-This template should help get you started developing with Vue 3 in Vite.
+# 🗺️ Projeto: Localizador com Vue.js + OpenStreetMap + Node.js
 
-## Recommended IDE Setup
+Este projeto exibe um mapa interativo com OpenStreetMap, permitindo que o usuário:
+- Digite um endereço ou clique em um ponto no mapa.
+- Envie as coordenadas geográficas (latitude e longitude) para um backend.
+- Armazene os dados em um arquivo `coordenadas.json`.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+---
 
-## Customize configuration
+## Estrutura do Projeto
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+mp/
+├── public/
+├── src/
+│ ├── assets/
+│ ├── components/
+│ ├── App.vue
+│ └── main.js
+├── server.js
+├── package.json
+├── vite.config.js
+└── coordenadas.json (gerado após o envio)
 
-## Project Setup
+---
 
-```sh
+## Como rodar o projeto
+
+### 1. Instalar dependências
+
+```bash
 npm install
 ```
+### 2. Rodar o backend (porta 3000)
 
-### Compile and Hot-Reload for Development
+```
+node server.js
+```
 
-```sh
+### 3. Rodar o frontend (porta padrão 5173)
+
+```
 npm run dev
 ```
 
-### Compile and Minify for Production
+## Como usar
 
-```sh
-npm run build
+1. Na tela inicial, digite um endereço ou clique em qualquer ponto do mapa.
+
+2. Clique no botão "Enviar Coordenadas".
+
+3. As coordenadas selecionadas serão enviadas para o backend e salvas em coordenadas.json.
+
+Exemplo de saída
+
 ```
+{
+  "lat": -23.561414,
+  "lgn": -46.655881
+}
+```
+
+## Requisitos
+
+Node.js v18 ou superior
+
+Navegador moderno
+
+Conexão com a internet (para acessar a API de geocodificação do OpenStreetMap)
