@@ -10,17 +10,19 @@ Este projeto exibe um mapa interativo com OpenStreetMap, permitindo que o usuár
 
 ## Estrutura do Projeto
 
+```text
 mp/
 ├── public/
 ├── src/
-│ ├── assets/
-│ ├── components/
-│ ├── App.vue
-│ └── main.js
+│   ├── assets/
+│   ├── components/
+│   ├── App.vue
+│   └── main.js
 ├── server.js
 ├── package.json
 ├── vite.config.js
 └── coordenadas.json (gerado após o envio)
+```
 
 ---
 
